@@ -15,7 +15,7 @@ from biogeme.expressions import Beta
 
 
 df = pd.read_csv('C:/ATS/Results_All_Merged_Work.csv', sep = ';' )
-pd.set_option('display.max_row', 23000)
+pd.set_option('display.max_row', 20000)
 pd.set_option('display.max_columns', 250)
 pd.options.mode.chained_assignment = None
 final_df = df[['q0003','q0004','q0005','q0006','q0008','q0009','q0036','q0007']]
