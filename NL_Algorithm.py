@@ -9,7 +9,7 @@ from biogeme.expressions import Beta, Variable, DefineVariable, bioMultSum
 
 
 # Read the data
-df = pd.read_csv('C:/Users/artem/Desktop/ATS/theThesis/Results_All_Merged_Work.csv', sep = ';' )
+df = pd.read_csv('Results_All_Merged_Work.csv', sep = ';' )
 pd.set_option('display.max_row', 23000)
 pd.set_option('display.max_columns', 250)
 pd.options.mode.chained_assignment = None
@@ -202,8 +202,7 @@ logprob = models.lognested(V, None, nests, CHOICE)
 biogeme = bio.BIOGEME(database, logprob)
 biogeme.modelName = 'Before_NL_6Alternatives_modelV1'
 
-# Estimate the parameters. Calculate also the standard errors using
-# bootstrapping.? why
+# Estimate the parameters
 results = biogeme.estimate(bootstrap=50)
 
 # Get the results in a pandas table
